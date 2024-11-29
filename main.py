@@ -1,12 +1,12 @@
 from string_utils import parse_reaction, count_atoms_for_each_mol
-from equations_utils import build_equations, solve
+from equations_utils import build_equations, my_solve
 
 
 
 
 
-from sympy import symbols, Eq
-from sympy import solve as sympy_solve
+# from sympy import symbols, Eq
+# from sympy import solve as sympy_solve
 
 
 # ELEMENTS = [
@@ -127,7 +127,7 @@ def balance_reaction(reaction): #"Fe2O3 + H2 -> Fe + H2O"
 
     # 2.build equation and solve
     equations, coefficients = build_equations(reactant_atoms, product_atoms)
-    coefficients = solve(equations, coefficients) + [1]
+    coefficients = my_solve(equations, coefficients) + [1]
 
     return coefficients # [1/3, 1, 2/3, 1]
 
