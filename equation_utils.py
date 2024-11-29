@@ -45,7 +45,7 @@ def build_equations(reactant_atoms, product_atoms):
     return equations, reactant_coefficients + product_coefficients[:-1]
 
 
-def solve(equations, coefficients):
+def my_solve(equations, coefficients):
     solution = sympy_solve(equations, coefficients)
 
     if len(solution) == len(coefficients):
