@@ -44,5 +44,12 @@ def count_atoms_in_molecule(molecular_formula):
 In `main.py`, import all the necessary functions from `string_utils.py` and `equation_utils.py` so that `balance_reaction` works correctly.
 
 - Identify which functions are needed from each file.  
+- Write the appropriate import statements at the top of `main.py`.
+
+In `equation_utils.py`, ensure that the necessary functions from `sympy` are imported.  
+Note: The function `my_solve` uses the `solve` function from `sympy` but is referenced as `sympy_solve`.  
+
+
+- Identify which functions are needed from each file.  
 - Write the appropriate import statements at the top of `main.py`.  
 
