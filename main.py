@@ -1,4 +1,5 @@
-# Add the import statements for necessary sympy functions here
+# Add the import statements for functions from string_utils.py and equation_utils.py here
+
 
 def balance_reaction(reaction): #"Fe2O3 + H2 -> Fe + H2O"
 
