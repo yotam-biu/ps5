@@ -1,5 +1,5 @@
 # from main import balance_reaction
-# from sympy import solve as sympy_solve
+from sympy import solve as sympy_solve
 
 def test_balance():
     assert True
