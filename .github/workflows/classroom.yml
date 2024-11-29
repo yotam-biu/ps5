@@ -24,7 +24,7 @@
 #       id: tests-balance_test-py
 #       uses: classroom-resources/autograding-python-grader@v1
 #       with:
-#         timeout: 10
+#         timeout: 50
 #         max-score: 5
 #         setup-command: ''
 #     - name: Autograding Reporter
