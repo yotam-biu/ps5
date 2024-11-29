@@ -24,11 +24,12 @@ In the function `count_atoms_in_molecule` inside `string_utils.py`, fill in the 
 def count_atoms_in_molecule(molecular_formula):
     """Takes a molecular formula (string) and returns a dictionary of atom counts.  
     Example: 'H2O' → {'H': 2, 'O': 1}"""
-    # fill in missing line to initiate a dictionary
+
+    # Q: Add a line to initialize an empty dictionary to store atom counts.
     for atom in split_by_capitals(molecular_formula):
         atom_name, atom_count = split_at_number(atom)
-        # fill in missing line to update the dictionary
-    # return the dictionary
+        # Q: Add a line to update the dictionary with the atom name and count.  
+    # Q: Add a line to return the completed dictionary.  
 ```
 
 ### Your tasks are:
