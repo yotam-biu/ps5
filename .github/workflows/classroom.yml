@@ -51,18 +51,18 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: main_test.py
-      id: main_test-py
+    - name: ".tests /balance_test.py"
+      id: tests-balance_test-py
       uses: classroom-resources/autograding-python-grader@v1
       with:
-        timeout: 10
+        timeout: 50
         max-score: 10
         setup-command: pip install pytest numpy sympy
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
-        MAIN_TEST-PY_RESULTS: "${{steps.main_test-py.outputs.result}}"
+        TESTS-BALANCE_TEST-PY_RESULTS: "${{steps.tests-balance_test-py.outputs.result}}"
       with:
-        runners: main_test-py
+        runners: tests-balance_test-py
 
 
