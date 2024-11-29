@@ -29,6 +29,7 @@ def count_atoms_in_molecule(molecular_formula):
         atom_name, atom_count = split_at_number(atom)
         # fill in missing line to update the dictionary
     # return the dictionary
+```
 
 ### Your tasks are:
 
