@@ -11,10 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     if: github.actor != 'github-classroom[bot]'
     steps:
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        python -m pip install flake8 pytest numpy
     - name: Checkout code
       uses: actions/checkout@v4
     - name: ".tests /import_test.py"
@@ -30,7 +26,7 @@ jobs:
       with:
         timeout: 10
         max-score: 5
-        setup-command: 'pip install numpy'
+        setup-command: ''
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
@@ -38,3 +34,6 @@ jobs:
         TESTS-BALANCE_TEST-PY_RESULTS: "${{steps.tests-balance_test-py.outputs.result}}"
       with:
         runners: tests-import_test-py,tests-balance_test-py
+
+
+
