@@ -19,21 +19,23 @@ def split_at_digit(formula):
             return formula[:i], int(formula[i:])
     return formula, 1
 
-def parse_compound(compound):
-    compound_elements = {}
-    for element in split_before_uppercases(compound):
-        element_name, element_value = split_at_digit(element)
-        compound_elements[element_name] = element_value
-    return compound_elements
+def count_atoms_in_molecule(molecular_formula):
+    """Counts the number of each atom in a molecular formula."""
+    atoms_count = {}
+    for atom in split_by_capitals(molecular_formula):
+        atom_name, atom_count = split_at_number(atom)
+        atoms_count[atom_name] = atom_count
+    return atoms_count
 
-def parse_reaction(reaction_str):
-    """Converts the reaction string into reactants and products list."""
-    reaction_str = reaction_str.replace(" ", "")  # Remove spaces for easier parsing
-    reactants, products = reaction_str.split("->")
+def parse_chemical_reaction(reaction_equation):
+    """Parses a chemical reaction equation into reactants and products."""
+    reaction_equation = reaction_equation.replace(" ", "")  # Remove spaces for easier parsing
+    reactants, products = reaction_equation.split("->")
     return reactants.split("+"), products.split("+")
 
-def count_atoms_for_each_mol(mols):
-    atoms = []
-    for mol in mols:
-        atoms.append(parse_compound(mol))
-    return atoms
+def count_atoms_in_reaction(molecules_list):
+    """Counts the atoms in a list of molecular formulas."""
+    molecules_atoms_count = []
+    for molecule in molecules_list:
+        molecules_atoms_count.append(count_atoms_in_molecule(molecule))
+    return molecules_atoms_count
