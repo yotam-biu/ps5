@@ -29,3 +29,18 @@ def count_atoms_in_molecule(molecular_formula):
         atom_name, atom_count = split_at_number(atom)
         # fill in missing line to update the dictionary
     # return the dictionary
+
+### Your tasks are:
+
+1. Add a line to initialize an empty dictionary to store atom counts.  
+2. Add a line to update the dictionary with the atom name and count.  
+3. Add a line to return the completed dictionary.  
+
+---
+
+### 3. Write All Import Statements
+In `main.py`, import all the necessary functions from `string_utils.py` and `equation_utils.py` so that `balance_reaction` works correctly.
+
+- Identify which functions are needed from each file.  
+- Write the appropriate import statements at the top of `main.py`.  
+
