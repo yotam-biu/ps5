@@ -22,8 +22,8 @@ def split_at_digit(formula):
 def count_atoms_in_molecule(molecular_formula):
     """Counts the number of each atom in a molecular formula."""
     atoms_count = {}
-    for atom in split_by_capitals(molecular_formula):
-        atom_name, atom_count = split_at_number(atom)
+    for atom in split_before_uppercases(molecular_formula):
+        atom_name, atom_count = split_at_digit(atom)
         atoms_count[atom_name] = atom_count
     return atoms_count
 
