@@ -31,8 +31,8 @@ def build_equations(reactant_atoms, product_atoms):
     Example: For H2 + O2 -> H2O, returns equations [2*a0 - 2*b0, a1 - b0]."""
     ## coefficients ##
     reactant_coefficients = list(symbols(f'a0:{len(reactant_atoms)}'))
-    product_coefficients = list(symbols(f'b0:{len(product_atoms)}'))  # Ensure the last coefficient is 1
-    product_coefficients = product_coefficients[:-1] + [1]
+    product_coefficients = list(symbols(f'b0:{len(product_atoms)}')) 
+    product_coefficients = product_coefficients[:-1] + [1] # Ensure the last coefficient is 1
 
     ## equations ##
     equations = []
